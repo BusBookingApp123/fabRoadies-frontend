@@ -1,1 +1,47 @@
-<app-browse></app-browse>
+<!-- navbar part -->
+<nav class="container-fluid navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#91ee45e5;">
+    <a class="navbar-brand" href="#" style="font-family: 'Francois One', sans-serif;font-size:35px;">
+        <img id="bus-icon" src="/assets/icon01.jpg"> FabRoadies
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto offset-md-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="#aboutUs">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Manage Bookings
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Change Date</a></li>
+                    <li><a class="dropdown-item" href="#">Cancel Trip</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#destinations">Destination</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#feedback-form">Contact Us</a>
+            </li>
+            <button type="submit" class="btn btn-success" id="login-btn" routerLink='/login'>Login</button>
+            <button type="submit" class="btn btn-success" id="signUp-btn">Sign Up</button>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
+<!--Footer-->
+<footer class="footer mt-auto py-3 bg-light">
+
+    <div class="container d-flex d-row  justify-content-center align-items-center">
+        <img class="foot-icon" src="/assets/facebook-icon.png"><img class="foot-icon" src="/assets/insta-icon.jpg"><img
+            class="foot-icon" src="/assets/twitter-icon02.jpg">
+    </div>
+    <h6 class="text-center text-muted">Contact Us at (+91 1234567890)</h6>
+</footer>
