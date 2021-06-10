@@ -1,4 +1,4 @@
-<!--Background-->
+<!DOCTYPE html>
 <div class="bg" style="background-image: url(/assets/Images/2.png);">
 
     <!--Login Part-->
@@ -27,12 +27,11 @@
                     <form (ngSubmit) = "validate()">
                         <div class="form mb-3">
                             <label class="form-label"><b>Email address</b></label>
-                            <input type="email" class="form-control rounded-pill border border-3 border-success"
-                                placeholder="name@example.com" [(ngModle)]="emailid">
+                            <input name ="emailid" [(ngModle)]="emailid" type="email" class="form-control rounded-pill border border-3 border-success" placeholder="name@example.com">
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Password</b></label>
-                            <input type="password" class="form-control rounded-pill border border-3 border-success" [(ngModle)]="emailid">
+                            <input name ="passwd" [(ngModle)]="passwd" type="password" class="form-control rounded-pill border border-3 border-success ">
                         </div>
                         <div class="btn-group" role="group">
                             <button type="submit" class="btn btn-success btn-lg">Login</button>
@@ -42,5 +41,4 @@
             </div>
         </div>
     </div>
-
-   
+</div>
