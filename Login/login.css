@@ -1,0 +1,30 @@
+#bus-icon {
+    height: 75px;
+    width: 69px;
+    border: 3px dotted darkgreen;
+    border-radius: 50%;
+}
+.heading{
+    text-align: center;
+    padding-top: 150px;
+    font-size:medium;
+}
+.container{
+    padding-top: 2px;
+}
+
+.card{
+    width:21rem;
+}
+
+.login{
+    margin:70px;
+}
+
+.foot-icon{
+    height: 9%;
+    width: 5%;
+    margin: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
