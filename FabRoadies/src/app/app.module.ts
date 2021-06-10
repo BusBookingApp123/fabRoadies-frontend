@@ -4,15 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowseComponent } from './browse/browse.component';
+import { LoginComponent } from './login/login.component';
+import{HttpClientModule} from'@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BrowseComponent
+    BrowseComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
