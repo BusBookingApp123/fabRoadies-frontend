@@ -8,10 +8,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  emailid: string = '';
+  passwd: string = '';
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    
   }
 
+  validate(){
+    console.log(this.emailid + ":" + this.passwd);
+  }
 
 }
