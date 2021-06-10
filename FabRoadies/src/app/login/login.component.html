@@ -24,15 +24,15 @@
                 <div class="col-6">
                     <div class="ques"><em><b>Don't have an account? <span><a href="#"><b>SIGN UP</b></a></span></b></em>
                     </div>
-                    <form>
+                    <form (ngSubmit) = "validate()">
                         <div class="form mb-3">
                             <label class="form-label"><b>Email address</b></label>
                             <input type="email" class="form-control rounded-pill border border-3 border-success"
-                                placeholder="name@example.com">
+                                placeholder="name@example.com" [(ngModle)]="emailid">
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Password</b></label>
-                            <input type="password" class="form-control rounded-pill border border-3 border-success">
+                            <input type="password" class="form-control rounded-pill border border-3 border-success" [(ngModle)]="emailid">
                         </div>
                         <div class="btn-group" role="group">
                             <button type="submit" class="btn btn-success btn-lg">Login</button>
