@@ -78,9 +78,10 @@
     border-radius: 50%;
     border: 8px solid rgba(128, 128, 128, 0.445);
     border-style: double;
+    box-shadow: 4px 4px 8px darkslategrey;
 }
 
-.destination{
+.bus-route{
     background: url('/assets/destination-img.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -90,6 +91,11 @@
 #destination-icon{
     cursor: pointer;
     margin: 18px;
+    background-color: rgba(196, 115, 243, 0.815);
+}
+
+#destination-icon:hover{
+    background-color: rgba(0, 204, 255, 0.678);
 }
 
 #icon-para{
