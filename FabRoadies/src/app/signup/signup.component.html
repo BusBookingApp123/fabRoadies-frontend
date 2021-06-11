@@ -34,32 +34,36 @@
     </div>
 </nav>
 
-<!--Background-->>
+<!--Background-->
 <div class="bg" style="background-image: url(/assets/Images/2.png);">
 
     <!--Signup Part-->
     <div class="main container-fluid">
         <div class="heading my-4">
-            <h2 class="fs-1"><b>Welcome to the Login Page!!</b></h2>
+            <h2 class="fs-2"><b>Welcome to FabRoadies!!</b></h2>
         </div>
         <div class="login">
             <div class="row">
                 <div class="col-5">
                     <div class="container my-4">
                         <div class="card">
-                            <img src="/assets/Images/1.jpg" class="card-img-top">
+                            <img src="assets/Images/3.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h4 class="card-title text-center"><b>Book Your Ticket</b></h4>
-                                &nbsp;
-                                <h5 class="text-center">Anytime!! From Anywhere!!</h5>
+                                <h5 class="card-title">Logged In/Registered users get MORE!</h5>
+                                <ul class="list-group list-group-numbered card-text">
+                                    <li class="list-group-item">View/ Cancel Bookings</li>
+                                    <li class="list-group-item">Manage cancellations & print eTickets</li>
+                                    <li class="list-group-item">Book faster with Forms</li>
+                                    <li class="list-group-item">Book from the selection of buses, including AC, Non-AC, Deluxe and more.</li>
+                                    <li class="list-group-item">Pay through cards, Net banking or mobile wallets for Bus reservation</li>
+                                    <li class="list-group-item">We have tied up with best bus operators in India to make travel easy.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-6">
-                    <div class="ques"><em><b>Don't have an account? <span><a href="#"><b>SIGN UP</b></a></span></b></em>
-                    </div>
+                <div class="col-7">
                     <form (ngSubmit)= "save()" #frm=ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>Name</b></label>
@@ -103,8 +107,11 @@
                         </div>
                         
                         <div class="btn-group" role="group">
-                            <button type="submit" [disabled]=!frm.valid class="btn btn-success btn-lg">Login</button>
+                            <button type="submit" [disabled]=!frm.valid class="btn btn-success btn-lg">Submit</button>
                         </div>
+                        <p>By proceeding, you agree with our Terms of Service, Privacy Policy & Master User Agreement.</p>
+
+
                     </form>
                 </div>
             </div>
