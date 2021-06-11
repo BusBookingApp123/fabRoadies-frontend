@@ -7,14 +7,12 @@ import { BrowseComponent } from './browse/browse.component';
 import { LoginComponent } from './login/login.component';
 import{HttpClientModule} from'@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BrowseComponent,
     LoginComponent,
-    AdminComponent
   ],
   imports: [
     BrowserModule,
