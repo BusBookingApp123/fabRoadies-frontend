@@ -24,14 +24,22 @@
                 <div class="col-6">
                     <div class="ques"><em><b>Don't have an account? <span><a href="#"><b>SIGN UP</b></a></span></b></em>
                     </div>
-                    <form (ngSubmit)= "validate()">
+                    <form (ngSubmit)= "validate()" #frm=ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>Email address</b></label>
-                            <input name ="emailid" [(ngModel)]="emailid" type="email" class="form-control rounded-pill border border-3 border-success" placeholder="name@example.com">
+                            <input name ="email" [(ngModel)]="user.email" type="email" class="form-control rounded-pill border border-3 border-success"
+                             placeholder="name@example.com" #umail=ngModel required>
+                             <div *ngIf="umail.invalid" class="alert alert-warning" role="alert">
+                                 Invalid Email Id
+                             </div>
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Password</b></label>
-                            <input name ="passwd" [(ngModel)]="passwd" type="password" class="form-control rounded-pill border border-3 border-success ">
+                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-success"
+                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,}">
+                            <div *ngIf="pwd.invalid" class="alert alert-warning" role="alert">
+                                Invalid Password
+                            </div>
                         </div>
                         <div class="btn-group" role="group">
                             <button type="submit" class="btn btn-success btn-lg">Login</button>
