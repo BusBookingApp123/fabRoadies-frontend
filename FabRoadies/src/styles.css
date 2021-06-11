@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+nav{
+    height: 85px;
+}
 #bus-icon {
     height: 75px;
     width: 69px;
