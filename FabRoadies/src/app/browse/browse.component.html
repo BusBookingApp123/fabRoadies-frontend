@@ -29,7 +29,7 @@
                 <a class="nav-link" href="#feedback-form">Contact Us</a>
             </li>
             <button type="submit" class="btn btn-success" id="login-btn" routerLink='/login'>Login</button>
-            <button type="submit" class="btn btn-success" id="signUp-btn">Sign Up</button>
+            <button type="submit" class="btn btn-success" id="signUp-btn" routerLink='/signup'>Sign Up</button>
         </ul>
     </div>
 </nav>
@@ -189,7 +189,7 @@
                     <label class="form-label">Name: </label>
                     <input name="name" [(ngModel)]="user.name" type="text" class="form-control" required
                         placeholder="Your Name" #uname=ngModel pattern="[A-Za-z]{3,}">
-                        <div *ngIf="uname.invalid&&uname.dirty" class="alert alert-warning" role="alert">
+                        <div *ngIf="uname.invalid && uname.dirty" class="alert alert-warning" role="alert">
                             Please fill your Name!
                         </div>
                 </div>
@@ -197,7 +197,7 @@
                     <label class="form-label">Email address: </label>
                     <input name="email" [(ngModel)]="user.email" type="email" class="form-control"
                         placeholder="name@example.com" required #umail=ngModel>
-                        <div *ngIf="umail.invalid&&umail.dirty" class="alert alert-warning" role="alert">
+                        <div *ngIf="umail.invalid && umail.dirty" class="alert alert-warning" role="alert">
                             Invalid Email!
                         </div>
                 </div>
