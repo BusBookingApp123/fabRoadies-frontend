@@ -29,7 +29,7 @@
                             <label class="form-label"><b>Email address</b></label>
                             <input name ="email" [(ngModel)]="user.email" type="email" class="form-control rounded-pill border border-3 border-success"
                              placeholder="name@example.com" #umail=ngModel required>
-                             <div *ngIf="umail.invalid" class="alert alert-warning" role="alert">
+                             <div *ngIf="email.invalid" class="alert alert-warning" role="alert">
                                  Invalid Email Id
                              </div>
                         </div>
