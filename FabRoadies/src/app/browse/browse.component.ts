@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/user.model';
 
 @Component({
   selector: 'app-browse',
@@ -8,10 +9,9 @@ import { Router } from '@angular/router';
 })
 export class BrowseComponent implements OnInit {
 
-  public name:string='';
-  public email:string='';
-  public phnNo:number=0;
   public feedBack:string='';
+
+  user:User=new User();
 
   constructor() { }
 
@@ -19,11 +19,9 @@ export class BrowseComponent implements OnInit {
   }
 
   feedback(){
-    if(this.name&&this.email&&this.feedBack!=null){
-      alert('Thanks for the Feedback!')
-    }
-    console.log(this.name+"has "+this.email+"and "+this.phnNo);
+    alert('Thanks for the feedback!');
+    console.log(this.user.name+" has "+this.user.email+" and "+this.user.phnNo);
     console.log(this.feedBack);
-  }
+   }
 
 }
