@@ -21,7 +21,7 @@ export class BrowseComponent implements OnInit {
   feedback(){
     alert('Thanks for the feedback!');
     console.log(this.user.name+" has "+this.user.email+" and "+this.user.phnNo);
-    console.log(this.feedBack);
+    console.log("FeedBack:" +this.feedBack);
    }
 
 }
