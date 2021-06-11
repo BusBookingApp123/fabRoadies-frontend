@@ -13,12 +13,10 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   validate() {
-    console.log(this.user.email+":"+this.user.password);
+    console.log(this.user.email + ":" + this.user.password);
   }
 
 }
