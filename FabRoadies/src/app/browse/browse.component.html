@@ -145,33 +145,44 @@
 
 <!--Feedback Form-->
 <div class="container-fluid my-4" id="feedback-form">
-    <form (ngSubmit)="feedback()">
+    <form (ngSubmit)="feedback()" #frm=ngForm>
         <div class="row">
             <div class="col-lg-5 col-md-4">
                 <div class="mb-3">
                     <label class="form-label">Name: </label>
-                    <input name="name" [(ngModel)]="name" type="text" class="form-control" placeholder="Your Name">
+                    <input name="name" [(ngModel)]="user.name" type="text" class="form-control" required
+                        placeholder="Your Name" #uname=ngModel pattern="[A-Za-z]{3,}">
+                        <div *ngIf="uname.invalid&&uname.dirty" class="alert alert-warning" role="alert">
+                            Please fill your Name!
+                        </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email address: </label>
-                    <input name="email" [(ngModel)]="email" type="email" class="form-control"
-                        placeholder="name@example.com">
+                    <input name="email" [(ngModel)]="user.email" type="email" class="form-control"
+                        placeholder="name@example.com" required #umail=ngModel>
+                        <div *ngIf="umail.invalid&&umail.dirty" class="alert alert-warning" role="alert">
+                            Invalid Email!
+                        </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Phone Number: </label>
-                    <input name="phnNo" [(ngModel)]="phnNo" type="number" class="form-control"
-                        placeholder="(+91) 1234567890">
+                    <input name="phnNo" [(ngModel)]="user.phnNo" type="number" class="form-control"
+                        placeholder="(+91) 1234567890" #uphn=ngModel>
                 </div>
             </div>
             <div class="col-lg-7 col-md-8">
                 <div class="mb-3">
                     <label class="form-label">Suggestions/Feedback :</label>
                     <textarea name="feedBack" [(ngModel)]="feedBack" class="form-control"
-                        placeholder="Write your suggestions/feedbacks here" rows="8"></textarea>
+                        placeholder="Write your suggestions/feedbacks here" rows="8" required
+                        #fback=ngModel></textarea>
+                        <div *ngIf="fback.invalid&&fback.dirty" class="alert alert-warning" role="alert">
+                            Please write something!
+                        </div>
                 </div>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" [disabled]=!frm.valid>Submit</button>
     </form>
 </div>
