@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   validate() {
     if(this.user.email=='admin@email.com'&&this.user.password=='admin123')
-      this.router.navigate(['admin']);
+      this.router.navigate(['admin-browse']);
     else if(this.user.email=='fabroadies@gmail.com' && this.user.password == 'fabroadies')
       this.flag = true;
     else
