@@ -10,12 +10,11 @@ import { User } from 'src/user.model';
 export class LoginComponent implements OnInit {
 
   user: User = new User();
+  flag : boolean = false;
 
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   validate() {
     if(this.user.email=='admin@email.com'&&this.user.password=='admin123'){

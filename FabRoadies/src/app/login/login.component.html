@@ -29,7 +29,7 @@
                             <label class="form-label"><b>Email address</b></label>
                             <input name ="email" [(ngModel)]="user.email" type="email" class="form-control rounded-pill border border-3 border-success"
                              placeholder="name@example.com" #umail=ngModel required>
-                             <div *ngIf="umail.invalid" class="alert alert-warning" role="alert">
+                             <div *ngIf="umail.invalid && umail.dirty" class="alert alert-warning" role="alert">
                                  Invalid Email Id
                              </div>
                         </div>
@@ -37,7 +37,7 @@
                             <label class="form-label"><b>Password</b></label>
                             <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-success"
                             #pwd=ngModel required pattern="[A-Za-z0-9]{5,}">
-                            <div *ngIf="pwd.invalid" class="alert alert-warning" role="alert">
+                            <div *ngIf="pwd.invalid && pwd.dirty" class="alert alert-warning" role="alert">
                                 Invalid Password
                             </div>
                         </div>
