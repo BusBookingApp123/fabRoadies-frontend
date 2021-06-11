@@ -9,7 +9,7 @@ import { User } from 'src/user.model';
 })
 export class SignupComponent implements OnInit {
 
-  user : User = new User;
+  user : User = new User();
   flag : boolean = false;
 
   constructor() { }
