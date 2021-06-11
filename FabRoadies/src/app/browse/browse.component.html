@@ -25,7 +25,7 @@
         believe in the fact that while on vacations or trips or journeys, the time you spend on road is the most
         important one as It affects our moods and we make most of our priceless memories on roads itself. Thus, We
         are committed on a mission to make every Indian's road journey a spellbound experience.
-        
+
         We hope you would have loved travelling with us, and we are open to all kinds of worthy feedbacks and/ or
         suggestions you might have for us, Tell us !!!
         (Feedback Form Link)
@@ -145,30 +145,33 @@
 
 <!--Feedback Form-->
 <div class="container-fluid my-4" id="feedback-form">
-    <div class="row">
-        <div class="col-lg-5 col-md-4">
-            <div class="mb-3">
-                <label class="form-label">Name: </label>
-                <input type="text" class="form-control" placeholder="Your Name">
+    <form (ngSubmit)="feedback()">
+        <div class="row">
+            <div class="col-lg-5 col-md-4">
+                <div class="mb-3">
+                    <label class="form-label">Name: </label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email address: </label>
+                    <input name="email" [(ngModel)]="email" type="email" class="form-control"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number: </label>
+                    <input name="phnNo" [(ngModel)]="phnNo" type="number" class="form-control"
+                        placeholder="(+91) 1234567890">
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Email address: </label>
-                <input type="email" class="form-control" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Phone Number: </label>
-                <input type="number" class="form-control" placeholder="(+91) 1234567890">
+            <div class="col-lg-7 col-md-8">
+                <div class="mb-3">
+                    <label class="form-label">Suggestions/Feedback :</label>
+                    <textarea name="feedBack" [(ngModel)]="feedBack" class="form-control"
+                        placeholder="Write your suggestions/feedbacks here" rows="8"></textarea>
+                </div>
             </div>
         </div>
-        <div class="col-lg-7 col-md-8">
-            <div class="mb-3">
-                <label class="form-label">Suggestions/Feedback :</label>
-                <textarea class="form-control" placeholder="Write your suggestions/feedbacks here"
-                    rows="8"></textarea>
-            </div>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
 </div>
-
-
