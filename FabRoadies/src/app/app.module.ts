@@ -9,6 +9,7 @@ import{HttpClientModule} from'@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { AdminBrowseComponent } from './admin-browse/admin-browse.component';
+import { AddBusComponent } from './add-bus/add-bus.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AdminBrowseComponent } from './admin-browse/admin-browse.component';
     LoginComponent,
     SignupComponent,
     AdminBrowseComponent,
+    AddBusComponent,
   ],
   imports: [
     BrowserModule,
