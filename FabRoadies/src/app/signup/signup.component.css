@@ -10,6 +10,19 @@
     background-position: right;
 }
 
+.card{
+    width:10rem;
+}
+
+.icon{
+    background-position: 1px;
+    display: inline-block;
+    height: 21px;
+    width: 9%;
+    float: left;
+    color: #f76b38;
+    background: url(/assets/Images/resched.png);
+}
 .heading{
     text-align: center;
     padding-top: 80px;
