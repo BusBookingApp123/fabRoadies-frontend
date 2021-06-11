@@ -11,13 +11,16 @@ export class LoginComponent implements OnInit {
 
   user: User = new User();
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
 
   }
 
   validate() {
+    if(this.user.email=='admin@email.com'&&this.user.password=='admin123'){
+      this.router.navigate(['admin']);
+    }
     console.log(this.user.email+":"+this.user.password);
   }
 
