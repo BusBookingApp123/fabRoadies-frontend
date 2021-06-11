@@ -17,9 +17,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   validate() {
-    if(this.user.email=='admin@email.com'&&this.user.password=='admin123'){
+    if(this.user.email=='admin@email.com'&&this.user.password=='admin123')
       this.router.navigate(['admin']);
-    }
+    else if(this.user.email=='fabroadies@gmail.com' && this.user.password == 'fabroadies')
+      this.flag = true;
+    else
+      alert("Invalid user id");
     console.log(this.user.email+":"+this.user.password);
   }
 
