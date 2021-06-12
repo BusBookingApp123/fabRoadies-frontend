@@ -18,8 +18,10 @@ export class AdminBusListComponent implements OnInit {
     this.bList=this.service.getAdminBusList();
   }
 
-  showList(){
 
+  //logout fn.
+  logout(){
+    this.router.navigate(['home']);
   }
 
 }
