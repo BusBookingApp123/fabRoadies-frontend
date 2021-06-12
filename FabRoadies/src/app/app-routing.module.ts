@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path:'',component:BrowseComponent},
+  {path:'home',component:BrowseComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'admin-browse',component:AdminBrowseComponent},
