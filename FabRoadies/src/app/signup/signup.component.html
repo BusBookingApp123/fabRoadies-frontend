@@ -35,7 +35,8 @@
 </nav>
 
 <!--Background-->
-<div class="bg" style="background-image: url(/assets/Images/2.png);">
+
+<div class="bg" style="background-image: url(/assets/Images/4.png);">
 
     <!--Signup Part-->
     <div class="main container-fluid">
@@ -66,18 +67,18 @@
                 </div>
 
                 <div class="col-7">
-                    <form (ngSubmit)= "save()" #frm=ngForm>
+                    <form (ngSubmit) = "onSubmit()" #sfrm = ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>Name</b></label>
-                            <input name ="name" [(ngModel)]="user.name" type="text" class="form-control rounded-pill border border-3 border-success"
-                             placeholder="Your Full Name" #uname=ngModel required pattern="[A-Z][a-z]{5,}">
-                             <div *ngIf="uname.invalid && uname.dirty" class="alert alert-warning" role="alert">
-                                 Enter your name
-                             </div>
+                            <input name ="name" [(ngModel)]="user.name" type="text" class="form-control rounded-pill border border-3 border-danger"
+                            placeholder="Your Full Name" #uname=ngModel required pattern="[A-Za-z]*{5,15}">
+                            <div *ngIf="uname.invalid && uname.dirty" class="alert alert-warning" role="alert">
+                                Enter your name
+                            </div>
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Contact No.</b></label>
-                            <input name ="phone" [(ngModel)]="user.phnNo" type="tel" class="form-control rounded-pill border border-3 border-success"
+                            <input name ="phone" [(ngModel)]="user.phnNo" type="tel" class="form-control rounded-pill border border-3 border-danger"
                              placeholder="Enter mobile no." #phn=ngModel required pattern="[0-9]{10}">
                              <div *ngIf="phn.invalid && phn.dirty" class="alert alert-warning" role="alert">
                                  Enter valid number
@@ -85,7 +86,7 @@
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Email address</b></label>
-                            <input name ="email" [(ngModel)]="user.email" type="email" class="form-control rounded-pill border border-3 border-success"
+                            <input name ="email" [(ngModel)]="user.email" type="email" class="form-control rounded-pill border border-3 border-danger"
                              placeholder="name@example.com" #umail=ngModel required>
                              <div *ngIf="umail.invalid && umail.dirty" class="alert alert-warning" role="alert">
                                  Invalid Email Id
@@ -93,7 +94,7 @@
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Password</b></label>
-                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-success"
+                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-danger"
                             #pwd=ngModel required pattern="[A-Za-z0-9]{5,}">
                             <div *ngIf="pwd.invalid && pwd.dirty" class="alert alert-warning" role="alert">
                                 Invalid Password
@@ -101,19 +102,18 @@
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Confirm Password</b></label>
-                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-success"
-                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,}">
+                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-danger"
+                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,15}">
                             <div *ngIf="pwd.invalid && pwd.dirty" class="alert alert-warning" role="alert">
                                 Invalid Password
                             </div>
                         </div>
-                        
+                    
                         <div class="btn-group" role="group">
-                            <button type="submit" [disabled]=!frm.valid class="btn btn-success btn-lg">Submit</button>
+                            <button type="submit" [disabled]=!sfrm.valid class="btn btn-danger btn-lg">Submit</button>
                         </div>
-                        <p>By proceeding, you agree with our Terms of Service, Privacy Policy & Master User Agreement.</p>
 
-
+                        <p class="fs-5"><b><em>By proceeding, you agree with our Terms of Service, Privacy Policy.</em></b></p>  
                     </form>
                 </div>
             </div>
