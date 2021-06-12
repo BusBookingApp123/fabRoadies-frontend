@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./no-buses-found.component.css']
 })
 export class NoBusesFoundComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
