@@ -1,0 +1,67 @@
+<!--Admin Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#91ee45f3;">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink='/admin-browse'>
+            <img id="bus-icon" src="/assets/icon01.jpg"> FabRoadies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse offset-md-6" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Add Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/admin_bus-list'>List Of Bus</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Search Bus
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Source</a></li>
+                        <li><a class="dropdown-item" href="#">Destination</a></li>
+                        <li><a class="dropdown-item" href="#">Departure Date</a></li>
+                    </ul>
+                </li>
+                <button class="btn btn-success mx-3">Logout</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Admin List UI-->
+<div class="container-fluid">
+    <form>
+        <table class="table table-warning table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Bus Number</th>
+                <th scope="col">Source</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Agency</th>
+                <th scope="col">Bus Type</th>
+                <th scope="col">Departure City</th>
+                <th scope="col">Date of Departure</th>
+                <th scope="col">Departure Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b in bList">
+                <th scope="row">{{b.busNo}}</th>
+                <td>{{b.source}}</td>
+                <td>{{b.destination}}</td>
+                <td>{{b.agency}}</td>
+                <td>{{b.busType}}</td>
+                <td>{{b.depCity}}</td>
+                <td>{{b.datOfDep}}</td>
+                <td>{{b.depTime}}</td>
+                <td><button class="btn btn-info">Update</button></td>
+                <td><button class="btn btn-danger">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </form>
+</div>
