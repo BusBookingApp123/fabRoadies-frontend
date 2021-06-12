@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-7">
-                    <form (ngSubmit)= "onSubmit()" #frm=ngForm>
+                    <form (ngSubmit) = "onSubmit()" #sfrm = ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>Name</b></label>
                             <input name ="name" [(ngModel)]="user.name" type="text" class="form-control rounded-pill border border-3 border-danger"
@@ -103,16 +103,17 @@
                         <div class="form mb-3">
                             <label class="form-label"><b>Confirm Password</b></label>
                             <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-danger"
-                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,}">
+                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,15}">
                             <div *ngIf="pwd.invalid && pwd.dirty" class="alert alert-warning" role="alert">
                                 Invalid Password
                             </div>
                         </div>
-                        
+                    
                         <div class="btn-group" role="group">
-                            <button type="submit" [disabled]=!frm.valid class="btn btn-danger btn-lg">Submit</button>
+                            <button type="submit" [disabled]=!sfrm.valid class="btn btn-danger btn-lg">Submit</button>
                         </div>
-                        <p class="fs-5"><b><em>By proceeding, you agree with our Terms of Service, Privacy Policy.</em></b></p>
+
+                        <p class="fs-5"><b><em>By proceeding, you agree with our Terms of Service, Privacy Policy.</em></b></p>  
                     </form>
                 </div>
             </div>
