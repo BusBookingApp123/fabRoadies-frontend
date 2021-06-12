@@ -14,13 +14,12 @@ import { SignupComponent } from './signup/signup.component';
 import { AdminBrowseComponent } from './admin-browse/admin-browse.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
 import { NoBusesFoundComponent } from './no-buses-found/no-buses-found.component';
-
-
 import { BusListComponent } from './bus-list/bus-list.component';
 import { AdminBusListComponent } from './admin-bus-list/admin-bus-list.component';
 import { BysourceComponent } from './AdminSearchComponent/bysource/bysource.component';
 import { BydestinationComponent } from './AdminSearchComponent/bydestination/bydestination.component';
 import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
+import { TicketBookingPageComponent } from './ticket-booking-page/ticket-booking-page.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,9 @@ import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component'
     BysourceComponent,
     BydestinationComponent,
     BydateComponent,
+    TicketBookingPageComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     FormsModule,
