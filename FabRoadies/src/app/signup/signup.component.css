@@ -7,7 +7,13 @@
 
 .bg{
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: 48rem;
+}
+
+.login{
+    padding-top:23px;
 }
 
 .card{
