@@ -29,7 +29,7 @@
                 <a class="nav-link" href="#feedback-form">Contact Us</a>
             </li>
             <button type="submit" class="btn btn-success" id="login-btn" routerLink='/login'>Login</button>
-            <button type="submit" class="btn btn-success" id="signUp-btn">Sign Up</button>
+            <button type="submit" class="btn btn-success" id="signUp-btn" routerLink='/signup'>Sign Up</button>
         </ul>
     </div>
 </nav>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="ques"><em><b>Don't have an account? <span><a href="#"><b>SIGN UP</b></a></span></b></em>
+                    <div class="ques"><em><b>Don't have an account? <span><a routerLink='/signup'><b>SIGN UP</b></a></span></b></em>
                     </div>
                     <form (ngSubmit)= "validate()" #frm=ngForm>
                         <div class="form mb-3">
