@@ -12,6 +12,9 @@ import { AdminBrowseComponent } from './admin-browse/admin-browse.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
 import { BusListComponent } from './bus-list/bus-list.component';
 import { AdminBusListComponent } from './admin-bus-list/admin-bus-list.component';
+import { BysourceComponent } from './AdminSearchComponent/bysource/bysource.component';
+import { BydestinationComponent } from './AdminSearchComponent/bydestination/bydestination.component';
+import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { AdminBusListComponent } from './admin-bus-list/admin-bus-list.component
     AddBusComponent,
     BusListComponent,
     AdminBusListComponent,
+    BysourceComponent,
+    BydestinationComponent,
+    BydateComponent,
   ],
   imports: [
     BrowserModule,
