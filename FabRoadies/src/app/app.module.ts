@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { AdminBrowseComponent } from './admin-browse/admin-browse.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
+import { BusListComponent } from './bus-list/bus-list.component';
+import { AdminBusListComponent } from './admin-bus-list/admin-bus-list.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AddBusComponent } from './add-bus/add-bus.component';
     SignupComponent,
     AdminBrowseComponent,
     AddBusComponent,
+    BusListComponent,
+    AdminBusListComponent,
   ],
   imports: [
     BrowserModule,
