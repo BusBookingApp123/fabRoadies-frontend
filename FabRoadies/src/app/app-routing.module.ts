@@ -14,8 +14,9 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'admin-browse',component:AdminBrowseComponent},
   {path:'admin_bus-list',component:AdminBusListComponent},
+  {path :'no-bus', component:NoBusesFoundComponent},
   {path:'**',redirectTo:'',pathMatch:'full'},
-  {path :'no-bus', component:NoBusesFoundComponent}
+ 
 ];
 
 @NgModule({
