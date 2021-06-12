@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  save() {
+  onSubmit() {
     console.log("Your data is submitted successfully" + this.user.name +":"+ this.user.phnNo +":"+ this.user.email +":"+ this.user.password);
     alert("Your data is submitted successfully");
   }
