@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-7">
-                    <form (ngSubmit)= "save()" #frm=ngForm>
+                    <form (ngSubmit)= "onSubmit()" #frm=ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>Name</b></label>
                             <input name ="name" [(ngModel)]="user.name" type="text" class="form-control rounded-pill border border-3 border-danger"
