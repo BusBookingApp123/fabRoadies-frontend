@@ -8,6 +8,8 @@ export class AdminService {
 
   busList:BusAdmin[]=[{
     "busNo":123,
+    "source":"From Demo",
+    "destination":"To Demo2",
     "agency":"Demo Agency",
     "busType":"Demo Type",
     "depCity":"Demo Cityn",
@@ -20,4 +22,8 @@ export class AdminService {
   // addBus(admin:BusAdmin){
   //   return this.busList.push(admin);
   // }
+
+  getAdminBusList():BusAdmin[]{
+    return this.busList;
+  }
 }
