@@ -4,7 +4,8 @@ export class BusAdmin{
     public destination : string = '';
     public agency : string = '';
     public busType : string = '';
-    public depCity : string = '';
     public dateOfDep : string = '';
     public depTime : number = 0;
+    public seatNo : number = 0;
+    public price : number = 0;
 }
