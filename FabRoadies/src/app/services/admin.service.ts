@@ -20,7 +20,7 @@ export class AdminService {
 
   constructor() { }
 
-   addBus(admin : BusAdmin){
+   addAdminBus(admin : BusAdmin){
     this.busList.push(admin);
   }
 
