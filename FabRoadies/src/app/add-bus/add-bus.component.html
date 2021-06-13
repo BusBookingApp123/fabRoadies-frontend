@@ -81,9 +81,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Seat Number</td>
-                <td><input name="seatno" [(ngModel)]="addBus.seatNo" #sno=ngModel required>
-                    <div *ngIf="sno.invalid && sno.dirty">Invalid</div>
+                <td>Number of Seats</td>
+                <td><input name="noOfseats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required>
+                    <div *ngIf="seatsNo.invalid && seatsNo.dirty">Invalid</div>
                 </td>
             </tr>
             <tr>
