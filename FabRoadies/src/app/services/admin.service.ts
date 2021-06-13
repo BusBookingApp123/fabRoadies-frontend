@@ -12,9 +12,10 @@ export class AdminService {
     "destination":"To Demo2",
     "agency":"Demo Agency",
     "busType":"Demo Type",
-    "depCity":"Demo Cityn",
     "dateOfDep":"00/00/0000",
-    "depTime":1234
+    "depTime":1234,
+    "seatNo":43,
+    "price":250
   }];
 
   constructor() { }
