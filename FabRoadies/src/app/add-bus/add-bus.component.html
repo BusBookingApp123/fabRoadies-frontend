@@ -1,1 +1,102 @@
-<p>add-bus works!</p>
+<!--Author Sanchari Saha-->
+
+<!--Admin Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#91ee45f3;">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink='/admin-browse'>
+            <img id="bus-icon" src="/assets/icon01.jpg"> FabRoadies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse offset-md-6" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Add Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/admin_bus-list'>List Of Bus</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Search Bus
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Source</a></li>
+                        <li><a class="dropdown-item" href="#">Destination</a></li>
+                        <li><a class="dropdown-item" href="#">Departure Date</a></li>
+                    </ul>
+                </li>
+                <button class="btn btn-success mx-3" (click)="logout()">Logout</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Add Bus UI-->
+<div class="container-fluid">
+    <form (ngSubmit)="save()" #frm=ngForm>
+        <table class="table table-primary">
+            <tr>
+                <td>Bus Number</td>
+                <td><input type="number" name="busno" [(ngModel)]="addBus.busNo" #bno=ngModel required>
+                    <div *ngIf="bno.invalid && bno.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Source</td>
+                <td><input type="text" name="source" [(ngModel)]="addBus.source" #src=ngModel required>
+                    <div *ngIf="src.invalid && src.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Destination</td>
+                <td><input type="text" name="destination" [(ngModel)]="addBus.destination" #des=ngModel required>
+                    <div *ngIf="des.invalid && des.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Agency</td>
+                <td><input type="text" name="agency" [(ngModel)]="addBus.agency" #agen=ngModel required>
+                    <div *ngIf="agen.invalid && agen.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Bus Type</td>
+                <td><input type="text" name="busType" [(ngModel)]="addBus.busType" #bty=ngModel required>
+                    <div *ngIf="bty.invalid && bty.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Departure</td>
+                <td><input type="date" name="dateOfDep" [(ngModel)]="addBus.dateOfDep" #ddate=ngModel required>
+                    <div *ngIf="ddate.invalid && ddate.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Departure Time</td>
+                <td><input type="time" name="depTime" [(ngModel)]="addBus.depTime" #dtime=ngModel required>
+                    <div *ngIf="dtime.invalid && dtime.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Seat Number</td>
+                <td><input name="seatno" [(ngModel)]="addBus.seatNo" #sno=ngModel required>
+                    <div *ngIf="sno.invalid && sno.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Ticket Price</td>
+                <td><input name="price" [(ngModel)]="addBus.price" #tprice=ngModel required>
+                    <div *ngIf="tprice.invalid && tprice.dirty">Invalid</div>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">Save</button></td>
+                <td><button type="reset">Reset</button></td>
+            </tr>
+    </table>
+</form>
+</div>
+
