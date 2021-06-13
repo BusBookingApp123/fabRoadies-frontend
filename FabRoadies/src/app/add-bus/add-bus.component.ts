@@ -20,8 +20,9 @@ export class AddBusComponent implements OnInit {
   }
 
   save(){
-    this.service.addBus(this.addBus);
+    this.service.addAdminBus(this.addBus);
     console.log("Saving...." + this.addBus.busNo);
+    this.router.navigate(['admin-bus-list']);
   }
 
    //logout fn.
