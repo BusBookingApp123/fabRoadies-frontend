@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BusAdmin } from 'src/BusAdmin.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-bus',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddBusComponent implements OnInit {
 
-  constructor() { }
+  addBus : BusAdmin = new BusAdmin();
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  save(){
+    console.log("Saving...." + this.addBus.busNo);
+  }
+
+   //logout fn.
+   logout(){
+    this.router.navigate(['home']);
   }
 
 }
