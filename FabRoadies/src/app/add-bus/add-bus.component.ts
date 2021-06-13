@@ -1,6 +1,9 @@
+//Author Sanchari 
+
 import { Component, OnInit } from '@angular/core';
-import { BusAdmin } from 'src/BusAdmin.model';
 import { Router } from '@angular/router';
+import { BusAdmin } from 'src/BusAdmin.model';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-add-bus',
@@ -11,12 +14,13 @@ export class AddBusComponent implements OnInit {
 
   addBus : BusAdmin = new BusAdmin();
 
-  constructor(private router:Router) { }
+  constructor(private service:AdminService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   save(){
+    this.service.addBus(this.addBus);
     console.log("Saving...." + this.addBus.busNo);
   }
 
