@@ -7,21 +7,21 @@ import { BusAdmin } from 'src/BusAdmin.model';
 export class AdminService {
 
   busList: BusAdmin[] = [{
-    "busNo": 123,
+    "busNo": 124,
     "source": "From Demo",
     "destination": "To Demo2",
     "agency": "Demo Agency",
     "busType": "Demo Type",
     "dateOfDep": "00/00/0000",
     "depTime": 1234,
-    "seatNo": 43,
+    "noOfseats": 43,
     "price": 250
   }];
 
   constructor() { }
 
-  addAdminBus(admin: BusAdmin) {
-    this.busList.push(admin);
+  addAdminBus(addBus: BusAdmin) {
+    this.busList.push(addBus);
   }
 
   getAdminBusList(): BusAdmin[] {
