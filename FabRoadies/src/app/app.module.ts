@@ -20,6 +20,7 @@ import { BysourceComponent } from './AdminSearchComponent/bysource/bysource.comp
 import { BydestinationComponent } from './AdminSearchComponent/bydestination/bydestination.component';
 import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
 import { TicketBookingPageComponent } from './ticket-booking-page/ticket-booking-page.component';
+import { ByBusNoComponent } from './AdminSearchBus/by-bus-no/by-bus-no.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TicketBookingPageComponent } from './ticket-booking-page/ticket-booking
     BydestinationComponent,
     BydateComponent,
     TicketBookingPageComponent,
+    ByBusNoComponent,
   ],
 
   imports: [
