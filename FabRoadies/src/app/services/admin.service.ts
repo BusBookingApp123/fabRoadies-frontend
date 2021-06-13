@@ -1,3 +1,5 @@
+//Author Anindita Sengupta
+
 import { Injectable } from '@angular/core';
 import { BusAdmin } from 'src/BusAdmin.model';
 
@@ -26,5 +28,9 @@ export class AdminService {
 
   getAdminBusList(): BusAdmin[] {
     return this.busList;
+  }
+
+  findByBusNo(busNo:number){
+    return this.busList.find(x=>x.busNo==busNo);
   }
 }
