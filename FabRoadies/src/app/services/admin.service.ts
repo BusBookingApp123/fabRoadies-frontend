@@ -33,4 +33,8 @@ export class AdminService {
   findByBusNo(busNo:number){
     return this.busList.find(x=>x.busNo==busNo);
   }
+
+  deleteBus(index:number){
+    return this.busList.splice(index,1);
+  }
 }
