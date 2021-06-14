@@ -43,9 +43,9 @@ export class AdminService {
     return this.busList.find(x=>x.busNo==busNo);
   }
 
-  deleteBus(index:number){
+  deleteBus(busNo:number){
     //async deleteBus(code : number){
       //return await this.http.delete(this.baseUrl + "/del/" +code);
-    return this.busList.splice(index,1);
+    return this.busList.splice(busNo,1);
   }
 }
