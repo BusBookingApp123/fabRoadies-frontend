@@ -20,10 +20,11 @@ export class AdminBusListComponent implements OnInit {
     this.bList=this.service.getAdminBusList();
   }
   //delete a record
-  remove(index:number){
+  remove(busNo:number){
     var ans = confirm("Are you sure to delete?");
     if(ans){
-    this.service.deleteBus(index);
+    this.service.deleteBus(busNo);
+    this.bList = this.bList.filter(bList => bList.busNo != busNo);
   }
 }
 
