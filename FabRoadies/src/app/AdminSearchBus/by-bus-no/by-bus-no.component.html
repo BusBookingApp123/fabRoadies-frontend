@@ -40,7 +40,7 @@
     <form (ngSubmit)="search()">
         <div class="mb-3">
             <label class="form-label">Enter the Bus Number: </label>
-            <input type="number" name="busNo" class="form-control" [(ngModel)]="busNo">
+            <input  name="busno" class="form-control" [(ngModel)]="busno">
         </div>
         <button class="btn btn-info">Search Bus</button>
     </form>
@@ -62,14 +62,14 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">{{admin.busNo}}</th>
-                <td>{{admin.source}}</td>
-                <td>{{admin.destination}}</td>
+                <th scope="row">{{admin.busno}}</th>
+                <td>{{admin.departureCity}}</td>
+                <td>{{admin.arrivalCity}}</td>
                 <td>{{admin.agency}}</td>
                 <td>{{admin.busType}}</td>
-                <td>{{admin.dateOfDep}}</td>
-                <td>{{admin.depTime}}</td>
-                <td>{{admin.noOfseats}}</td>
+                <td>{{admin.dateOfDeparture}}</td>
+                <td>{{admin.departuretime}}</td>
+                <td>{{admin.seats}}</td>
                 <td>{{admin.price}}</td>
             </tr>
     </table>
