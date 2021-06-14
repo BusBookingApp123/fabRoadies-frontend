@@ -51,8 +51,7 @@
                 <div class="form-group">
                     <label for="bus"><b>Bus Number</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="[0-9]{}">
-                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="{1,}">
+                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="[0-9]{1,}">
                     <div *ngIf="bno.invalid && bno.dirty">Invalid</div>
                 </div>
                 <br>
@@ -108,22 +107,14 @@
                 <div class="form-group">
                     <label for="bus"><b>Number of Seats</b></label>
                     &nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
-                    <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required>
-=======
                     <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required pattern="[0-9]{1,}">
->>>>>>> bcb2b4b5c0d99e047e1ac7f16663bbfd92314f0e
                     <div *ngIf="seatsNo.invalid && seatsNo.dirty">Invalid</div>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="bus"><b>Ticket Price</b></label>
                     &nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
-                    <input class="form-control" name="price" placeholder="Enter the price of ticket per head" [(ngModel)]="addBus.price" #tprice=ngModel required>
-=======
                     <input class="form-control" name="price" placeholder="Enter the price of ticket per head" [(ngModel)]="addBus.price" #tprice=ngModel required pattern="[0-9]{1,}">
->>>>>>> bcb2b4b5c0d99e047e1ac7f16663bbfd92314f0e
                     <div *ngIf="tprice.invalid && tprice.dirty">Invalid</div>
                 </div>
                 <br>
