@@ -17,8 +17,10 @@ export class AdminBusListComponent implements OnInit {
   constructor(private service:AdminService,private router:Router) { }
 
   ngOnInit(): void {
+    //this.service.getAdminBusList().then(data => this.bList = data);
     this.bList=this.service.getAdminBusList();
   }
+
   //delete a record
   remove(busNo:number){
     var ans = confirm("Are you sure to delete?");

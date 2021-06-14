@@ -3,6 +3,7 @@
 import { Injectable } from '@angular/core';
 import { BusAdmin } from 'src/BusAdmin.model';
 import { HttpClient } from '@angular/common/http';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,7 @@ export class AdminService {
 
   getAdminBusList(): BusAdmin[] {
     //async getAdminBusList(): BusAdmin[] {
-    //return await this.http.get<BusAdmin[]>(this.baseUrl+"/busList").toPromise();
+    //return await this.http.get<BusAdmin[]>(this.baseUrl+"/busList").pipe(delay(100)).toPromise();
     return this.busList;
   }
 
@@ -43,6 +44,8 @@ export class AdminService {
   }
 
   deleteBus(index:number){
+    //async deleteBus(code : number){
+      //return await this.http.delete(this.baseUrl + "/del/" +code);
     return this.busList.splice(index,1);
   }
 }
