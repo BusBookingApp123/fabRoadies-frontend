@@ -19,9 +19,14 @@ export class AdminBusListComponent implements OnInit {
   ngOnInit(): void {
     this.bList=this.service.getAdminBusList();
   }
-
+  //delete a record
   remove(index:number){
     this.bList = this.service.deleteBus(index);
+  }
+
+  //update a record
+  update(){
+    
   }
 
 
