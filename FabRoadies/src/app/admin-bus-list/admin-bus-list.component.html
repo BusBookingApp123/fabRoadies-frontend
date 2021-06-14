@@ -62,7 +62,7 @@
                 <td>{{b.noOfseats}}</td>
                 <td>{{b.price}}</td>
                 <td><button class="btn btn-info" routerLink='/update'>Update</button></td>
-                <td><button class="btn btn-danger" (click)="remove(i)">Delete</button></td>
+                <td><button class="btn btn-danger" (click)="remove(b.busNo)">Delete</button></td>
             </tr>
         </tbody>
     </table>
