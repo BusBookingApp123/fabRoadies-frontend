@@ -51,12 +51,8 @@
                 <div class="form-group">
                     <label for="bus"><b>Bus Number</b></label>
                     &nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
                     <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="[0-9]{}">
-=======
-                    <input class="form-control" name="busno" placeholder="Enter the bus number"
-                        [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="{1,}">
->>>>>>> 984c62cb58d7b741d56f5cf60f6e245fbb58621e
+                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="{1,}">
                     <div *ngIf="bno.invalid && bno.dirty">Invalid</div>
                 </div>
                 <br>
