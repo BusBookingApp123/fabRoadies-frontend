@@ -31,10 +31,11 @@ export class AdminBusListComponent implements OnInit {
 }
 
   //update a record
-  update(){
-    
-  }
+  /*update(fno : number){
 
+    this.router.navigate(['edit'], {queryParams: {fno : fno}});
+  }*/
+    
 
   //logout fn.
   logout(){
