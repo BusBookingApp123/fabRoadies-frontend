@@ -20,6 +20,10 @@ export class AdminBusListComponent implements OnInit {
     this.bList=this.service.getAdminBusList();
   }
 
+  remove(index:number){
+    this.bList = this.service.deleteBus(index);
+  }
+
 
   //logout fn.
   logout(){
