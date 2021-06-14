@@ -51,14 +51,14 @@
                 <div class="form-group">
                     <label for="bus"><b>Bus Number</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="[0-9]{1,}">
-                    <div *ngIf="bno.invalid && bno.dirty">Invalid</div>
+                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busno" #bno=ngModel required >
+                
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="bus"><b>Source</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <select class="form-control" name="source" [(ngModel)]="addBus.source" #src=ngModel required>
+                    <select class="form-control" name="source" [(ngModel)]="addBus.departureCity" #src=ngModel required>
                         <option *ngFor="let s of source" [value]="s">{{s}}</option>
                     </select>
                     <div *ngIf="src.invalid && src.dirty">Invalid</div>
@@ -67,7 +67,7 @@
                 <div class="form-group">
                     <label for="bus"><b>Destination</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <select class="form-control" name="destination" [(ngModel)]="addBus.destination" #des=ngModel required>
+                    <select class="form-control" name="destination" [(ngModel)]="addBus.arrivalCity" #des=ngModel required>
                         <option *ngFor="let d of destination" [value]="d">{{d}}</option>
                     </select>
                     <div *ngIf="des.invalid && des.dirty">Invalid</div>
@@ -92,14 +92,14 @@
                 <div class="form-group">
                     <label for="bus"><b>Date of Departure</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" type="date" name="dateOfDep" [(ngModel)]="addBus.dateOfDep" #ddate=ngModel required>
+                    <input class="form-control" type="date" name="dateOfDep" [(ngModel)]="addBus.dateOfDeparture" #ddate=ngModel required>
                     <div *ngIf="ddate.invalid && ddate.dirty">Invalid</div>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="bus"><b>Departure Time</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" type="time" name="depTime" [(ngModel)]="addBus.depTime" #dtime=ngModel
+                    <input class="form-control" type="time" name="depTime" [(ngModel)]="addBus.departuretime" #dtime=ngModel
                         required>
                     <div *ngIf="dtime.invalid && dtime.dirty">Invalid</div>
                 </div>
@@ -107,7 +107,7 @@
                 <div class="form-group">
                     <label for="bus"><b>Number of Seats</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required pattern="[0-9]{1,}">
+                    <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.seats" #seatsNo=ngModel required pattern="[0-9]{1,}">
                     <div *ngIf="seatsNo.invalid && seatsNo.dirty">Invalid</div>
                 </div>
                 <br>
