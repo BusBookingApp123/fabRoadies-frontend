@@ -23,10 +23,10 @@ export class UpdateComponent implements OnInit {
 
   ngOnInit(): void {
 
-    /*this.aroute.queryParams.pipe(filter(params => params.bno)).subscribe(params => {
+    this.aroute.queryParams.pipe(filter(params => params.bno)).subscribe(params => {
       var pbno = params.bno;
       this.service.findByBusNo(pbno).subscribe(data => this.addBus = data);
-    })*/
+    })
   }
 
   update() {
