@@ -54,7 +54,7 @@ nav{
     height: 250px;
     text-align: center;
     /* margin: 20px; */
-    background-color:whitesmoke;
+    background-color:rgba(246, 248, 98, 0.363);
     /* text-align: center;
     background-color:whitesmoke;
     width: 1300px;
@@ -65,12 +65,12 @@ nav{
     height: 6%;
     width: 10%;
     float: right;
-    border: 2px solid rgba(15, 150, 15, 0.616);
-    border-radius: 8px;
+    border: 6px groove rgba(15, 150, 15, 0.616);
+    border-radius: 12px;
 }
 
 .booking-process{
-    background-color: whitesmoke;
+    background-color:rgba(246, 248, 98, 0.363);
 }
 
 .booking-icons{
@@ -80,8 +80,8 @@ nav{
     /* border:3px solid darkblue; */
     border-radius: 50%;
     border: 8px solid rgba(128, 128, 128, 0.445);
-    border-style: double;
-    box-shadow: 4px 4px 8px darkslategrey;
+    border-style: inset;
+    box-shadow: 4px 4px 8px rgb(52, 138, 138);
 }
 
 .bus-route{
@@ -108,7 +108,7 @@ nav{
 
 #feedback-form{
     padding: 10px;
-    background: linear-gradient(rgb(217, 255, 0),rgb(9, 255, 1));
+    background: linear-gradient(rgb(217, 255, 0),rgb(10, 146, 6));
 }
 
 .foot-icon{
