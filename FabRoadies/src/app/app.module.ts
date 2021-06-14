@@ -21,7 +21,6 @@ import { BydestinationComponent } from './AdminSearchComponent/bydestination/byd
 import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
 import { TicketBookingPageComponent } from './ticket-booking-page/ticket-booking-page.component';
 import { ByBusNoComponent } from './AdminSearchBus/by-bus-no/by-bus-no.component';
-import { DeleteComponent } from './delete/delete.component';
 import { UpdateComponent } from './update/update.component';
 
 @NgModule({
@@ -40,7 +39,6 @@ import { UpdateComponent } from './update/update.component';
     BydateComponent,
     TicketBookingPageComponent,
     ByBusNoComponent,
-    DeleteComponent,
     UpdateComponent,
   ],
 
