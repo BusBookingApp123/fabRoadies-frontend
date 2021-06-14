@@ -23,8 +23,11 @@ export class AdminBusListComponent implements OnInit {
 
   //delete a record
   remove(index:number){
-    this.bList = this.service.deleteBus(index);
+    var ans = confirm("Are you sure to delete?");
+    if(ans){
+    this.service.deleteBus(index);
   }
+}
 
   //update a record
   update(){

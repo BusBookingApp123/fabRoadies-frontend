@@ -51,7 +51,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let b of bList">
+            <tr *ngFor="let b of bList, let i=index">
                 <th scope="row">{{b.busNo}}</th>
                 <td>{{b.source}}</td>
                 <td>{{b.destination}}</td>
@@ -62,7 +62,7 @@
                 <td>{{b.noOfseats}}</td>
                 <td>{{b.price}}</td>
                 <td><button class="btn btn-info" routerLink='/update'>Update</button></td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td><button class="btn btn-danger" (click)="remove(i)">Delete</button></td>
             </tr>
         </tbody>
     </table>
