@@ -47,11 +47,11 @@
         </div>
 
         <div class="col-7">
-            <form class="card-text was-validated" (ngSubmit)="save()" #frm=ngForm>
+            <form class="card-text" (ngSubmit)="save()" #frm=ngForm>
                 <div class="form-group">
                     <label for="bus"><b>Bus Number</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="{1,}">
+                    <input class="form-control" name="busno" placeholder="Enter the bus number" [(ngModel)]="addBus.busNo" #bno=ngModel required pattern="[0-9]{}">
                     <div *ngIf="bno.invalid && bno.dirty">Invalid</div>
                 </div>
                 <br>
@@ -105,20 +105,20 @@
                 <div class="form-group">
                     <label for="bus"><b>Number of Seats</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required pattern="{1,}">
+                    <input class="form-control" name="noOfseats" placeholder="Enter the number of seats" [(ngModel)]="addBus.noOfseats" #seatsNo=ngModel required>
                     <div *ngIf="seatsNo.invalid && seatsNo.dirty">Invalid</div>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="bus"><b>Ticket Price</b></label>
                     &nbsp;&nbsp;&nbsp;
-                    <input class="form-control" name="price" placeholder="Enter the price of ticket per head" [(ngModel)]="addBus.price" #tprice=ngModel required pattern="{1,}">
+                    <input class="form-control" name="price" placeholder="Enter the price of ticket per head" [(ngModel)]="addBus.price" #tprice=ngModel required>
                     <div *ngIf="tprice.invalid && tprice.dirty">Invalid</div>
                 </div>
                 <br>
                 <br>
                 <div class="btn-group" role="group">
-                    <button type="submit" [disabled]=!frm.valid class="btn btn-danger btn-lg">Save</button>
+                    <button type="submit" [disabled]="!frm.valid" class="btn btn-danger btn-lg">Save</button>
                     &nbsp;&nbsp;&nbsp;
                     <button type="reset" [disabled]=!frm.valid class="btn btn-danger btn-lg">Reset</button>
                 </div>
