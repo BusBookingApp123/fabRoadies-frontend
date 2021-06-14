@@ -52,17 +52,17 @@
         </thead>
         <tbody>
             <tr *ngFor="let b of bList, let i=index">
-                <th scope="row">{{b.busNo}}</th>
-                <td>{{b.source}}</td>
-                <td>{{b.destination}}</td>
+                <th scope="row">{{b.busno}}</th>
+                <td>{{b.departureCity}}</td>
+                <td>{{b.arrivalCity}}</td>
                 <td>{{b.agency}}</td>
                 <td>{{b.busType}}</td>
-                <td>{{b.dateOfDep}}</td>
-                <td>{{b.depTime}}</td>
-                <td>{{b.noOfseats}}</td>
+                <td>{{b.dateOfDeparture}}</td>
+                <td>{{b.departuretime}}</td>
+                <td>{{b.seats}}</td>
                 <td>{{b.price}}</td>
-                <td><button class="btn btn-info" routerLink='/update'>Update</button></td>
-                <td><button class="btn btn-danger" (click)="remove(b.busNo)">Delete</button></td>
+                <td><button class="btn btn-info" (click)="update(b.busno)">Update</button></td>
+                <td><button class="btn btn-danger" (click)="remove(b.busno)">Delete</button></td>
             </tr>
         </tbody>
     </table>
