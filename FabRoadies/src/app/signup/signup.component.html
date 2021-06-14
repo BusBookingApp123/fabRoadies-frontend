@@ -81,7 +81,7 @@
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Contact No.</b></label>
-                            <input name ="phone" [(ngModel)]="user.phnNo" type="tel" class="form-control rounded-pill border border-3 border-danger"
+                            <input name ="phone" [(ngModel)]="user.phoneNumber" type="tel" class="form-control rounded-pill border border-3 border-danger"
                              placeholder="Enter mobile no." #phn=ngModel required pattern="[0-9]{10}">
                              <div *ngIf="phn.invalid && phn.dirty" class="alert alert-warning" role="alert">
                                  Enter valid number
@@ -105,11 +105,8 @@
                         </div>
                         <div class="form mb-3">
                             <label class="form-label"><b>Confirm Password</b></label>
-                            <input name ="password" [(ngModel)]="user.password" type="password" class="form-control rounded-pill border border-3 border-danger"
-                            #pwd=ngModel required pattern="[A-Za-z0-9]{5,15}">
-                            <div *ngIf="pwd.invalid && pwd.dirty" class="alert alert-warning" role="alert">
-                                Invalid Password
-                            </div>
+                            <input name ="password"  type="password" class="form-control rounded-pill border border-3 border-danger" required >
+                           
                         </div>
                     
                         <div class="btn-group" role="group">
