@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { NoBusesFoundComponent } from './no-buses-found/no-buses-found.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
 import { ByBusNoComponent } from './AdminSearchBus/by-bus-no/by-bus-no.component';
+import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   {path:'',component:BrowseComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'add-bus',component:AddBusComponent},
   {path:'admin_bus-list',component:AdminBusListComponent},
   {path:'search',component:ByBusNoComponent},
+  {path:'update',component:UpdateComponent},
   {path :'no-bus', component:NoBusesFoundComponent},
   {path:'**',redirectTo:'',pathMatch:'full'},
  
