@@ -2,6 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { BusAdmin } from 'src/BusAdmin.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class AdminService {
     "price": 250
   }];
   //[];
-  //baseUrl : string = "http://localhost:4200"
+  //baseUrl : string = "http://localhost:8080"
   
 
   //constructor(private http : HttpClient) { }
