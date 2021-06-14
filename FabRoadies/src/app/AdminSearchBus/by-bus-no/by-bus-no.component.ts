@@ -12,7 +12,7 @@ import { BusAdmin } from 'src/BusAdmin.model';
 })
 export class ByBusNoComponent implements OnInit {
 
-  busNo:number=0;
+  busno:string=" ";
   admin:BusAdmin=new BusAdmin();
 
   constructor(private service:AdminService,private router:Router) { }
@@ -22,7 +22,10 @@ export class ByBusNoComponent implements OnInit {
 
   //search by bus number
   search(){
-    this.admin=this.service.findByBusNo(this.busNo) as BusAdmin;
+    //this.admin=this.service.findByBusNo(this.busno) as BusAdmin;
+  
+    this.service.findByBusNo(this.busno).subscribe(data=>this.admin=data);
+    
   }
 
   //logout fn
