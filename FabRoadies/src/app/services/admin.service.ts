@@ -19,14 +19,21 @@ export class AdminService {
     "noOfseats": 43,
     "price": 250
   }];
+  //[];
+  //baseUrl : string = "http://localhost:4200"
+  
 
+  //constructor(private http : HttpClient) { }
   constructor() { }
 
   addAdminBus(addBus: BusAdmin) {
+    //this.http.post(this.baseUrl+"/add-bus",addBus).subscribe(data => data = addBus);
     this.busList.push(addBus);
   }
 
   getAdminBusList(): BusAdmin[] {
+    //async getAdminBusList(): BusAdmin[] {
+    //return await this.http.get<BusAdmin[]>(this.baseUrl+"/busList").toPromise();
     return this.busList;
   }
 
