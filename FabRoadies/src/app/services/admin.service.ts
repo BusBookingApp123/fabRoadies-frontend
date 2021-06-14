@@ -40,12 +40,17 @@ export class AdminService {
   }
 
   findByBusNo(busNo:number){
+    //return this.http.get<Flight>(this.baseUrl+"/flight/"+code);
     return this.busList.find(x=>x.busNo==busNo);
   }
 
   deleteBus(busNo:number){
-    //async deleteBus(code : number){
-      //return await this.http.delete(this.baseUrl + "/del/" +code);
+    //deleteBus(code : number){
+      //this.http.delete(this.baseUrl + "/del/" +code).subscribe();
     return this.busList.splice(busNo,1);
+  }
+
+  updateBus(addBus : BusAdmin){
+    //this.http.put(this.baseUrl+"/edit", addBus).subscribe();
   }
 }
