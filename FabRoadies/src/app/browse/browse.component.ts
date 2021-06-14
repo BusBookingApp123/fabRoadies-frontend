@@ -20,6 +20,7 @@ export class BrowseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //feedback data
   feedback(){
     alert('Thanks for the feedback!');
     console.log(this.user.name+" has "+this.user.email+" and "+this.user.phnNo);
