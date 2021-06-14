@@ -24,7 +24,7 @@ export class AddBusComponent implements OnInit {
 
   save(){
     this.service.addAdminBus(this.addBus);
-    console.log("Saving...." + this.addBus.busNo);
+    console.log("Saving...." + this.addBus.busno);
     alert("Your entry is saved successfully");
     this.router.navigate(['admin_bus-list']);
   }
