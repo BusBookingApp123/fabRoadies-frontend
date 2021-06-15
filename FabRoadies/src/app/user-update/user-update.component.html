@@ -21,6 +21,7 @@
                     <b>Manage Bookings</b>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#"><b>My Tickets</b></a></li>
                     <li><a class="dropdown-item" href="#"><b>Change Date</b></a></li>
                     <li><a class="dropdown-item" href="#"><b>Cancel Trip</b></a></li>
                 </ul>
@@ -31,14 +32,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="#feedback-form"><b>Contact Us</b></a>
             </li>
-            <button type="submit" class="btn btn-success" id="login-btn" routerLink='/login'>Login</button>
-            <button type="submit" class="btn btn-success" id="signUp-btn" routerLink='/signup'>Sign Up</button>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>User Profile</b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink='/user-update'><b>Update Profile</b></a></li>
+                    <li><a class="dropdown-item" (click)="logout()"><b>Logout</b></a></li>
+                </ul>
+            </li>            
         </ul>
     </div>
 </nav>
 
 <!--Background-->
-
 <div class="bg" style="background-image: url(/assets/Images/4.png);">
 
     <!--User Details Update Part-->
@@ -56,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-7">
-                    <form (ngSubmit) = "onSubmit()" #frm = ngForm>
+                    <form (ngSubmit) = "onUpdate()" #frm = ngForm>
                         <div class="form mb-3">
                             <label class="form-label"><b>User Id</b></label>
                             <input name ="id" [(ngModel)]="user.id" type="text" class="form-control rounded-pill border border-3 border-danger"
