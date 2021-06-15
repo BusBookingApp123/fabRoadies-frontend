@@ -1,3 +1,5 @@
+//Author Sanchari Saha
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/user.model';
@@ -18,6 +20,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
+
+
+  //validation function
+  
   validate() {
     this.service.loginUser(this.user.email,this.user.password).subscribe(data => this.role = data);
     // alert(this.role.roleId);
@@ -27,6 +33,7 @@ export class LoginComponent implements OnInit {
       this.flag = true;
     else
       alert("Invalid user id");
+
     // if(this.user.email=='admin@gmail.com'&&this.user.password=='admin123')
     //   this.router.navigate(['admin-browse']);
     // else if(this.user.email=='fabroadies@gmail.com' && this.user.password == 'fabroadies')
