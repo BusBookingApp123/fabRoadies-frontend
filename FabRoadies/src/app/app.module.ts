@@ -16,9 +16,9 @@ import { AddBusComponent } from './add-bus/add-bus.component';
 import { NoBusesFoundComponent } from './no-buses-found/no-buses-found.component';
 import { BusListComponent } from './bus-list/bus-list.component';
 import { AdminBusListComponent } from './admin-bus-list/admin-bus-list.component';
-import { BysourceComponent } from './AdminSearchComponent/bysource/bysource.component';
-import { BydestinationComponent } from './AdminSearchComponent/bydestination/bydestination.component';
-import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
+//import { BysourceComponent } from './AdminSearchComponent/bysource/bysource.component';
+//import { BydestinationComponent } from './AdminSearchComponent/bydestination/bydestination.component';
+//import { BydateComponent } from './AdminSearchComponent/bydate/bydate.component';
 import { TicketBookingPageComponent } from './ticket-booking-page/ticket-booking-page.component';
 import { ByBusNoComponent } from './AdminSearchBus/by-bus-no/by-bus-no.component';
 import { UpdateComponent } from './update/update.component';
@@ -36,9 +36,9 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     NoBusesFoundComponent,
     BusListComponent,
     AdminBusListComponent,
-    BysourceComponent,
-    BydestinationComponent,
-    BydateComponent,
+    //BysourceComponent,
+    //BydestinationComponent,
+    //BydateComponent,
     TicketBookingPageComponent,
     ByBusNoComponent,
     UpdateComponent,
