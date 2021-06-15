@@ -191,7 +191,7 @@
                 <div class="mb-3">
                     <label class="form-label">Name: </label>
                     <input name="name" [(ngModel)]="user.name" type="text" class="form-control" required
-                        placeholder="Your Name" #uname=ngModel pattern="[A-Za-z]{3,}">
+                        placeholder="Your Name" #uname=ngModel pattern="[A-Za-z]{2,}">
                         <div *ngIf="uname.invalid && uname.dirty" class="alert alert-warning" role="alert">
                             Please fill your Name!
                         </div>
