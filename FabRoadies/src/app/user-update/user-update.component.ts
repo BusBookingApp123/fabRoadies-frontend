@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/user.model';
 
 @Component({
   selector: 'app-user-update',
@@ -7,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserUpdateComponent implements OnInit {
 
-  constructor() { }
+  user : User = new User();
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
-}
+  onSubmit() {
 
+    // console.log("Your data is submitted successfully" + this.user.name +":"+ this.user.phnNo +":"+ this.user.email +":"+ this.user.password);
+    //this.service.addUser(this.user);
+  
+    alert("Your data is updated successfully");
+    }
+  
+  }
