@@ -16,12 +16,17 @@ export class UserUpdateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  onUpdate() {
 
     // console.log("Your data is submitted successfully" + this.user.name +":"+ this.user.phnNo +":"+ this.user.email +":"+ this.user.password);
     //this.service.addUser(this.user);
   
     alert("Your data is updated successfully");
+    }
+
+    //logout
+    logout(){
+      this.router.navigate(['home']);
     }
   
   }
