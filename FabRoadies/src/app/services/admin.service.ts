@@ -36,8 +36,6 @@ export class AdminService {
   deleteBus(busno:string){
   
     this.http.delete(this.baseUrl + "/admin/deleteBus/" +busno).subscribe();
-
-
      }
 
   findByBusNo(busno:string){
@@ -54,5 +52,10 @@ export class AdminService {
   addUser(user:User)
   {
     this.http.post(this.baseUrl+"/add/2",user).subscribe();
+  }
+
+  //cancel user tikcet
+  cancelTicket(ticketId:string){
+    this.http.delete(this.baseUrl + "/admin/deleteBus/" +ticketId).subscribe();
   }
 }
