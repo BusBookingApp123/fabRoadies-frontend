@@ -22,6 +22,7 @@ import { UpdateComponent } from './update/update.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserHomeComponent } from './user-home/user-home.component';
     UserUpdateComponent,
     TicketListComponent,
     UserHomeComponent,
+    PaymentComponent,
   ],
 
   imports: [
