@@ -21,6 +21,7 @@ import { ByBusNoComponent } from './AdminSearchBus/by-bus-no/by-bus-no.component
 import { UpdateComponent } from './update/update.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     UpdateComponent,
     UserUpdateComponent,
     TicketListComponent,
+    UserHomeComponent,
   ],
 
   imports: [
